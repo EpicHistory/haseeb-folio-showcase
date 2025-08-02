@@ -14,7 +14,7 @@ const Index = () => {
       <HeroSection />
       
       {/* About Section */}
-      <section id="about" className="py-20 bg-white dark:bg-black">
+      <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
             About Me
