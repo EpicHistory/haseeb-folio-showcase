@@ -3,7 +3,7 @@ import HeroSection from "@/components/hero-section";
 import TestimonialsDemo from "@/components/testimonials-demo";
 import ExperienceDemo from "@/components/experience-demo";
 import ProjectsDemo from "@/components/projects-demo";
-import { TechStack } from "@/components/ui/tech-stack";
+import AnimatedBeamDemo from "@/components/animated-beam-demo";
 import CTASection from "@/components/cta-section";
 import Footer from "@/components/footer";
 
@@ -28,7 +28,7 @@ const Index = () => {
         </div>
       </section>
 
-      <TechStack />
+      <AnimatedBeamDemo />
       <TestimonialsDemo />
       <ExperienceDemo />
       <ProjectsDemo />

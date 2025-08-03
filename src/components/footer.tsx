@@ -64,9 +64,6 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400">
           <p>&copy; 2024 Muhammad Haseeb. All rights reserved.</p>
-          <p className="mt-2 text-sm">
-            Built with React, TypeScript, and TailwindCSS
-          </p>
         </div>
       </div>
     </footer>
