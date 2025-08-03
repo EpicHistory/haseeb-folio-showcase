@@ -58,7 +58,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent dark:from-gray-100 dark:via-blue-200 dark:to-purple-200 mb-6">
+          <h1 className="text-5xl mt-12 sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent dark:from-gray-100 dark:via-blue-200 dark:to-purple-200 mb-6">
             Muhammad Haseeb
           </h1>
           <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-2">

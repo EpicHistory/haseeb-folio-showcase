@@ -6,6 +6,8 @@ import { forwardRef, useRef } from "react"
 import { cn } from "@/lib/utils"
 import { AnimatedBeam } from "@/components/ui/animated-beam"
 
+import postgres from "@/assets/postgress.png"
+
 const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React.ReactNode }>(
   ({ className, children }, ref) => {
     return (
@@ -28,15 +30,15 @@ export default function AnimatedBeamDemo() {
   const containerRef = useRef<HTMLDivElement>(null)
   const div1Ref = useRef<HTMLDivElement>(null)
   const div2Ref = useRef<HTMLDivElement>(null)
-  const div3Ref = useRef<HTMLDivElement>(null)
+
   const div4Ref = useRef<HTMLDivElement>(null)
   const div5Ref = useRef<HTMLDivElement>(null)
   const div6Ref = useRef<HTMLDivElement>(null)
 
   return (
-    <div className="py-20 bg-black" id="tech-stack">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+    <div className="py-12 bg-black" id="tech-stack">
+      <div className="text-center mb-8">
+        <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
           Technology Stack
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto">
@@ -59,70 +61,61 @@ export default function AnimatedBeamDemo() {
           </div>
           <div className="flex flex-row items-center justify-between">
             <Circle ref={div2Ref} className="size-16">
-              <Icons.javascript />
-            </Circle>
-            <Circle ref={div4Ref} className="size-20">
               <Icons.nodejs />
             </Circle>
-            <Circle ref={div6Ref} className="size-16">
+            <Circle ref={div4Ref} className="size-20">
               <Icons.python />
             </Circle>
-          </div>
-          <div className="flex flex-row items-center justify-between">
-            <Circle ref={div3Ref} className="size-16">
+            <Circle ref={div6Ref} className="size-16">
               <Icons.postgresql />
             </Circle>
           </div>
+          
         </div>
 
         <AnimatedBeam 
           containerRef={containerRef} 
           fromRef={div1Ref} 
           toRef={div4Ref} 
-          curvature={-75} 
-          endYOffset={-10} 
+          curvature={-50} 
+          endYOffset={-15} 
           pathWidth={4}
           gradientStartColor="#3b82f6"
           gradientStopColor="#a855f7"
         />
-        <AnimatedBeam 
-          containerRef={containerRef} 
-          fromRef={div2Ref} 
-          toRef={div4Ref} 
-          pathWidth={4}
-          gradientStartColor="#3b82f6"
-          gradientStopColor="#a855f7"
-        />
-        <AnimatedBeam 
-          containerRef={containerRef} 
-          fromRef={div3Ref} 
-          toRef={div4Ref} 
-          curvature={75} 
-          endYOffset={10} 
-          pathWidth={4}
-          gradientStartColor="#3b82f6"
-          gradientStopColor="#a855f7"
-        />
-        <AnimatedBeam
-          containerRef={containerRef}
-          fromRef={div5Ref}
-          toRef={div4Ref}
-          curvature={-75}
-          endYOffset={-10}
-          reverse
-          pathWidth={4}
-          gradientStartColor="#3b82f6"
-          gradientStopColor="#a855f7"
-        />
-        <AnimatedBeam 
-          containerRef={containerRef} 
-          fromRef={div6Ref} 
-          toRef={div4Ref} 
-          reverse 
-          pathWidth={4}
-          gradientStartColor="#3b82f6"
-          gradientStopColor="#a855f7"
-        />
+                 <AnimatedBeam 
+           containerRef={containerRef} 
+           fromRef={div2Ref} 
+           toRef={div4Ref} 
+           curvature={-50}
+           endYOffset={-15}
+           pathWidth={4}
+           gradientStartColor="#3b82f6"
+           gradientStopColor="#a855f7"
+         />
+        
+                 <AnimatedBeam
+           containerRef={containerRef}
+           fromRef={div5Ref}
+           toRef={div4Ref}
+           curvature={-50}
+           endYOffset={-15}
+           reverse
+           pathWidth={4}
+           gradientStartColor="#3b82f6"
+           gradientStopColor="#a855f7"
+         />
+         <AnimatedBeam 
+           containerRef={containerRef} 
+           fromRef={div6Ref} 
+           toRef={div4Ref} 
+           curvature={-50}
+           endYOffset={-15}
+           reverse 
+           pathWidth={4}
+           gradientStartColor="#3b82f6"
+           gradientStopColor="#a855f7"
+         />
       </div>
     </div>
   )
@@ -155,8 +148,7 @@ const Icons = {
     </svg>
   ),
   postgresql: () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-blue-700">
-      <path d="M23.111 5.498c-.096-1.5-.483-2.592-1.024-3.506C21.15.609 20.06-.334 18.602.088c-.664.194-1.29.57-1.852 1.052-.774.665-1.44 1.533-1.961 2.528-.554 1.058-.896 2.228-1.018 3.48-.116 1.19-.095 2.444.063 3.72.142 1.154.383 2.308.721 3.426.318 1.054.732 2.073 1.235 3.038.549 1.052 1.207 2.042 1.963 2.956.757.916 1.627 1.756 2.6 2.512 1.147.89 2.516 1.655 4.067 2.146 1.096.346 2.278.489 3.476.418 1.254-.074 2.505-.34 3.67-.792C24.142 21.082 24.97 19.24 24 17.02z" fill="currentColor"/>
-    </svg>
+    <img src={postgres} alt="PostgreSQL" className="w-6 h-6" />
   ),
+
 }
