@@ -59,23 +59,23 @@ export default function ProjectsDemo() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
         {projects.map((project, index) => (
-          <div key={index} className="h-[40rem] w-full flex items-center justify-center">
+          <div key={index} className="h-[32rem] w-full flex items-center justify-center">
             <PinContainer
               title={project.link}
               href={project.link}
             >
-              <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem]">
-                <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
+              <div className="flex basis-full flex-col p-3 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[18rem]">
+                <h3 className="max-w-xs !pb-1 !m-0 font-bold text-base text-slate-100">
                   {project.title}
                 </h3>
-                <div className="text-base !m-0 !p-0 font-normal">
+                <div className="text-sm !m-0 !p-0 font-normal">
                   <span className="text-slate-500">
                     {project.description}
                   </span>
                 </div>
                 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-1 mt-2 mb-4">
+                <div className="flex flex-wrap gap-1 mt-2 mb-3">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
@@ -87,7 +87,7 @@ export default function ProjectsDemo() {
                 </div>
 
                 <div 
-                  className="flex flex-1 w-full rounded-lg mt-4 bg-cover bg-center"
+                  className="flex flex-1 w-full rounded-lg mt-2 bg-cover bg-center"
                   style={{ backgroundImage: `url(${project.image})` }}
                 />
               </div>

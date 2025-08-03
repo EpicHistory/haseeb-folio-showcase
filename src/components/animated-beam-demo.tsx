@@ -49,31 +49,31 @@ export default function AnimatedBeamDemo() {
         className="relative flex h-[500px] w-full max-w-4xl mx-auto items-center justify-center overflow-hidden rounded-lg border border-gray-800 bg-black p-10"
         ref={containerRef}
       >
-        <div className="flex size-full max-h-[200px] max-w-lg flex-col items-stretch justify-between gap-10">
+        <div className="flex size-full max-h-[280px] max-w-2xl flex-col items-stretch justify-between gap-16">
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div1Ref}>
+            <Circle ref={div1Ref} className="size-16">
               <Icons.react />
             </Circle>
-            <Circle ref={div5Ref}>
+            <Circle ref={div5Ref} className="size-16">
               <Icons.typescript />
             </Circle>
           </div>
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div2Ref}>
+            <Circle ref={div2Ref} className="size-16">
               <Icons.nodejs />
             </Circle>
-            <Circle ref={div4Ref} className="size-16">
+            <Circle ref={div4Ref} className="size-20">
               <Icons.python />
             </Circle>
-            <Circle ref={div6Ref}>
+            <Circle ref={div6Ref} className="size-16">
               <Icons.postgresql />
             </Circle>
           </div>
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div3Ref}>
+            <Circle ref={div3Ref} className="size-16">
               <Icons.tailwind />
             </Circle>
-            <Circle ref={div7Ref}>
+            <Circle ref={div7Ref} className="size-16">
               <Icons.ai />
             </Circle>
           </div>
@@ -85,6 +85,7 @@ export default function AnimatedBeamDemo() {
           toRef={div4Ref} 
           curvature={-75} 
           endYOffset={-10} 
+          pathWidth={4}
           gradientStartColor="#3b82f6"
           gradientStopColor="#a855f7"
         />
@@ -92,6 +93,7 @@ export default function AnimatedBeamDemo() {
           containerRef={containerRef} 
           fromRef={div2Ref} 
           toRef={div4Ref} 
+          pathWidth={4}
           gradientStartColor="#3b82f6"
           gradientStopColor="#a855f7"
         />
@@ -101,6 +103,7 @@ export default function AnimatedBeamDemo() {
           toRef={div4Ref} 
           curvature={75} 
           endYOffset={10} 
+          pathWidth={4}
           gradientStartColor="#3b82f6"
           gradientStopColor="#a855f7"
         />
@@ -111,6 +114,7 @@ export default function AnimatedBeamDemo() {
           curvature={-75}
           endYOffset={-10}
           reverse
+          pathWidth={4}
           gradientStartColor="#3b82f6"
           gradientStopColor="#a855f7"
         />
@@ -119,6 +123,7 @@ export default function AnimatedBeamDemo() {
           fromRef={div6Ref} 
           toRef={div4Ref} 
           reverse 
+          pathWidth={4}
           gradientStartColor="#3b82f6"
           gradientStopColor="#a855f7"
         />
@@ -129,6 +134,7 @@ export default function AnimatedBeamDemo() {
           curvature={75}
           endYOffset={10}
           reverse
+          pathWidth={4}
           gradientStartColor="#3b82f6"
           gradientStopColor="#a855f7"
         />
